@@ -1,0 +1,1 @@
+GitHub > Actions > Afazi Terapi - Android APK > Run workflow > başarılı olunca Artifacts > afazi-terapi-debug-apk.

@@ -1,0 +1,34 @@
+name: Afazi Terapi - Web
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kodu indir
+        uses: actions/checkout@v5
+      - name: Pages ayarlarını hazırla
+        uses: actions/configure-pages@v5
+      - name: Web dosyalarını paketle
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./www
+      - name: GitHub Pages'e yayınla
+        id: deployment
+        uses: actions/deploy-pages@v4

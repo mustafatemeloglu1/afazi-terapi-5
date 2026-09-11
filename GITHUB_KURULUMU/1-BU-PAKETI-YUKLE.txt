@@ -1,0 +1,12 @@
+1) Yeni boş GitHub repository oluştur.
+2) ZIP'i bilgisayarda çıkart.
+3) GitHub > Add file > Upload files.
+4) Sadece paketin içindeki dosyaları yükle.
+5) www klasöründe SADECE iki dosya vardır: index.html ve content.json.
+6) .github klasörü gizli görünürse GITHUB_KURULUMU içindeki yönergede belirtilen iki workflow dosyasını New file ile oluştur.
+7) Settings > Pages > Source: GitHub Actions.
+8) Actions > Afazi Terapi - Web çalıştır.
+9) Actions > Afazi Terapi - Android APK çalıştır; başarılı olunca Artifacts'tan APK'yı indir.
+
+Bu sürümde assets klasörü YOK. Bu nedenle yüzlerce görsel dosyasını tek tek yüklemek gerekmiyor.
+Yeni içerik: www/content.json.
